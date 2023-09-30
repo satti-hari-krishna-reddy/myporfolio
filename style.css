@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    background-color: black;
+}
+.material-symbols-outlined{
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar {
+    margin-top: 3px;
+    display: flex;
+    background-color:#000;
+    justify-content: space-between;
+    align-items: center;
+   /* border-image: linear-gradient(to right, #FF7F9E, #6CA6CD);
+    border-image-slice: 1;
+    border-bottom: 1.5px solid;  */ 
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+ a{
+    text-decoration: none;
+    list-style: none; 
+    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: medium;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.logo span {
+      background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+      -webkit-background-clip: text;
+       color: transparent;
+       font-weight: bold;
+       margin-left: 2vw;
+       font-size: 24px;
+
+}
+.list-items{
+    margin-right: 3vw;
+}
+
+.list-items a {
+    padding: 5px;
+    transition: background 0.3s ease;
+}
+
+.list-items :hover {
+    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
+     color: #001;
+     border-radius: 20px;
+     padding:7px;
+}
+.description-container {
+    display: flex;
+    color: white;
+     align-items: center;
+    justify-content: space-between; 
+    margin-top: 15px;
+  }
+.description-container img {
+    width: 100vw;
+    max-width: 450px;
+    height: auto;
+}
+.description {
+       margin-left: 10px;
+       padding: 20px;
+       font-weight: bold;
+       font-size: 18px;
+       background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+      -webkit-background-clip: text;
+       color: transparent;     
+  }
+.description h1{
+    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;   
+}
+.about h1{
+    background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+      -webkit-background-clip: text;
+       color: transparent; 
+}
+.about-card{
+    background: #262626;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 13px;
+    color: white;
+}
+.about-card h2{
+    text-align: center;
+    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
+    -webkit-background-clip: text;
+    color: transparent;
+   
+}
+.about-card h4 {
+    margin: 5px; 
+    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.project {
+    background: #262626;
+    padding: 15px;
+    border-radius: 13px;
+    color: white;
+    width: 200px;
+    height: 330px;
+    overflow: hidden;
+  /* Center text */
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;   
+}
+
+.image-container img {
+    width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    object-position: top left;
+    margin: 0 auto; 
+    display: block;
+    overflow: hidden;
+  /* Center the image within its container */
+}
+.project div{
+    text-align: center;
+    margin-top: 5px;
+}
+.project div a{
+    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    -webkit-background-clip: text;
+    color: transparent; 
+}
