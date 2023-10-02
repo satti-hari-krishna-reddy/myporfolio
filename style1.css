@@ -9,27 +9,36 @@ body {
 html{
     scroll-behavior: smooth;
 }
+
 .navbar {
     position: sticky;
-    margin-top:5px;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); 
     justify-content: space-between;
     align-items: center;
+    background-color: #001;
     top:0;
     z-index: 1000;
 }
+
 #toggle-light-mode{
     background: linear-gradient(to right, #FFDAB9, #AFEEEE);
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 30px;
     cursor: pointer;
+    
 }
 #toggle-dark-mode{
+  
     display: none;
 }
+#fa-x,#fa-bars{
+    display: none;
+}
+#check{
+    display: none;
+}
+
 .list {
     display: flex;
     list-style: none;
@@ -45,15 +54,9 @@ html{
     font-weight: bolder;
     font-size: 17px;
 }
-.fa-x,.fa-bars{
-    display: none;
-}
-.fa-check{
-    display: none;
-}
 
 .logo span {
-      background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+    background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
       -webkit-background-clip: text;
        color: transparent;
        font-weight: bold;
@@ -72,13 +75,12 @@ html{
 
 .list-items :hover {
     background: linear-gradient(to right, #FFDAB9, #AFEEEE);
-     color: #001;
+    color: #001;
      border-radius: 20px;
      padding:7px;
 }
 .description-container {
     display: flex;
-    color: white;
      align-items: center;
     justify-content: space-between; 
     margin-top: 15px;
@@ -107,7 +109,6 @@ html{
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
 .about-container{
     display: flex;
@@ -116,7 +117,7 @@ html{
     gap:20px;   
 }
 .about h1{
-    background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+      background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
       -webkit-background-clip: text;
        color: transparent; 
 }
@@ -185,23 +186,27 @@ html{
     width: 290px;
     padding: 10px;
     border-radius: 13px;
-    color: white;
+    color: white; 
 }
-.contact-card p i{
-    margin-right: 15px;
-    margin-left: 5px;
+#email{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#email i{
     background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
     -webkit-background-clip: text;
     color: transparent;  
-    font-size: 21px;   
+    font-size: 21px;
+    cursor: pointer;   
 }
 .social-icons a{
     margin-left: 70px;
     font-size: 30px;
 }
 .btn1{
-    font-weight: lighter;
-    color: black;
+   font-weight: lighter;
+   color: black;
    display: inline-block;
    margin-top: 20px;
    margin-left: 60px;
@@ -211,7 +216,6 @@ html{
    cursor: pointer;
    border: none;
 }
-
 @media only screen and (max-width:1112px) {
     .about{
         flex-direction: column;
@@ -231,14 +235,6 @@ html{
     }
 }
 @media only screen and (max-width:700px) {
-    .fa-x,.fa-bars{
-        display: block;
-        background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
-        -webkit-background-clip: text;
-        color: transparent; 
-        cursor: pointer;
-    }
-    
 .list{
     flex-direction: column;
     gap:0px;
@@ -251,22 +247,32 @@ html{
     padding-top: 50px;
     z-index: 2;
     transition: right 0.3s ease; 
-    background: #000;
+    backdrop-filter: blur(12px);
+    background:transparent;
 }
 
 .list li{
     display: block;
     margin: 20px;
 }
-.fa-x{
+#fa-x{
     position: absolute;
     top: 23px;
     left: 20px;
-    cursor: pointer;
     font-size: 23px;
+    display: block;
+    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    -webkit-background-clip: text;
+    color: transparent; 
+    cursor: pointer;
 }
-.fa-bars{
+#fa-bars{
     margin-right: 30px;
     font-size: 30px;
+    display: block;
+    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    -webkit-background-clip: text;
+    color: transparent; 
+    cursor: pointer;
 }
 }

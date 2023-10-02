@@ -30,10 +30,10 @@ html{
     font-size: 30px;
     cursor: pointer;
 }
-.fa-x,.fa-bars{
+#fa-x,#fa-bars{
     display: none;
 }
-.fa-check{
+#check{
     display: none;
 }
 
@@ -183,13 +183,17 @@ html{
     color: black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
-.contact-card p i{
-    margin-right: 15px;
-    margin-left: 5px;
+#email{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#email i{
     background:  #a855f7;
     -webkit-background-clip: text;
     color: transparent;  
-    font-size: 21px;   
+    font-size: 21px;
+    cursor: pointer;   
 }
 .social-icons a{
     margin-left: 70px;
@@ -226,13 +230,6 @@ html{
     }
 }
 @media only screen and (max-width:700px) {
-    .fa-x,.fa-bars{
-        display: block;
-        background: #a855f7;
-        -webkit-background-clip: text;
-        color: transparent; 
-        cursor: pointer;
-    }
 .list{
     flex-direction: column;
     gap:0px;
@@ -253,15 +250,24 @@ html{
     display: block;
     margin: 20px;
 }
-.fa-x{
+#fa-x{
     position: absolute;
     top: 23px;
     left: 20px;
-    cursor: pointer;
     font-size: 23px;
+    display: block;
+    background: #a855f7;
+    -webkit-background-clip: text;
+    color: transparent; 
+    cursor: pointer;
 }
-.fa-bars{
+#fa-bars{
     margin-right: 30px;
     font-size: 30px;
+    display: block;
+    background: #a855f7;
+    -webkit-background-clip: text;
+    color: transparent; 
+    cursor: pointer;
 }
 }

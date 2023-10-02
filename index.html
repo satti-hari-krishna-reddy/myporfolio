@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to My Portfolio</title>
-    <link rel="stylesheet" href="style.css" id="theme-style">
+    <link rel="stylesheet" href="style1.css" id="theme-style">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <script src="https://kit.fontawesome.com/932e9edb43.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -16,13 +19,13 @@
         <i class="fa-solid fa-sun" id="toggle-light-mode" onclick="toggleTheme()" title="switch to light mode"></i>
         <i class="fa-solid fa-moon" id="toggle-dark-mode" onclick="toggleTheme()"title="switch to dark mode"></i>
         <ul class="list">
-            <li class="list-items"onclick="closemenu()"><a href="#home-scroll">Home</a></li>
-            <li class="list-items"onclick="closemenu()"><a href="#about-scroll">About</a></li>
-            <li class="list-items"onclick="closemenu()"><a href="#project-scroll">Projects</a></li>
-            <li class="list-items"onclick="closemenu()"><a href="#contact-scroll">Contact</a></li>
-            <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            <li class="list-items"><a onclick="closemenu()" href="#home-scroll">Home</a></li>
+            <li class="list-items"><a onclick="closemenu()" href="#about-scroll">About</a></li>
+            <li class="list-items"><a onclick="closemenu()" href="#project-scroll">Projects</a></li>
+            <li class="list-items"><a onclick="closemenu()" href="#contact-scroll">Contact</a></li>
+            <i id="fa-x"class="fa-solid fa-x" onclick="closemenu()"></i>
        </ul>
-       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+       <i id="fa-bars"class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
 
     <div id="home-scroll" class="description-container">
@@ -114,58 +117,27 @@
     </div>
     <div class="contact-container">
         <div class="contact-card">
-            <p><i class="fa-solid fa-paper-plane"></i> hari.100.hks@outlook.com <i id ="clipboard" class="fa-regular fa-clipboard" onclick="copyToClipBoard()" title="copy to clipboard"></i><i id="check" class="fa-solid fa-check"></i></p>
+            <div id="email"><i class="fa-solid fa-paper-plane"></i>
+                <p> hari.100.hks@outlook.com </p>
+                <i id ="clipboard" class="fa-regular fa-clipboard" onclick="copyToClipBoard()" title="copy to clipboard"></i>
+                <i id="check" class="fa-solid fa-check"></i>
+            </div>
               <div class="social-icons">
-                <a href="https://in.linkedin.com/in/hari-krishnareddy-86659b249"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://in.linkedin.com/in/hari-krishna-reddy-86659b249"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/satti-hari-krishna-reddy" target="_blank"><i class="fa-brands fa-github"></i></a>
               </div>
               <a id="contact-scroll" href="HARIKRISHNARESUME.pdf" download class="btn btn1">Download Resume</a>
         </div>
     </div>
     <script>
-          function toggleTheme() {
-            const themeStyle = document.getElementById('theme-style');
-            if (themeStyle.href.includes('style.css')) {
-                themeStyle.href = 'style2.css';
-                document.getElementById('toggle-light-mode').style.display = 'none';
-                document.getElementById('toggle-dark-mode').style.display = 'block';
-            } else {
-                themeStyle.href = 'style.css';
-                document.getElementById('toggle-dark-mode').style.display = 'none';
-                document.getElementById('toggle-light-mode').style.display = 'block';
-            }
-        }
+        var typed1 = new Typed('#typed-text', {
+                    strings: ['Hi, my name is Hari Krishna.'],typeSpeed: 35,});
 
-        function openmenu() {
-            document.querySelector('.list').style.right = '0';
-        }
-    
-        function closemenu() {
-            document.querySelector('.list').style.right = '-250px';
-        }
-        function copyToClipBoard(){
-            const text="hari.100.hks@outlook.com";
-            navigator.clipboard.writeText(text);
-            document.getElementById('clipboard').style.display='none';
-            document.getElementById('check').style.display='block';
-            setTimeout(setback,4000);
-        }
-        function setback(){
-            document.getElementById('check').style.display='none';
-            document.getElementById('clipboard').style.display='block';
-        }
-      var typed1 = new Typed('#typed-text', {
-      strings: ['Hi, my name is Hari Krishna.'],
-      typeSpeed: 35,
-    });
-    setTimeout(()=> {typed2 = new Typed('#typed-text2', {
-      strings: ["I'm an aspiring frontend developer."],
-      typeSpeed: 30,
-    });},2000);
-    setTimeout(()=>{ typed3 = new Typed('#typed-text3', {
-      strings: ["looking for internships or a full-time role in web development or SDE. Open to collaborating with like-minded individuals to create meaningful projects."],
-      typeSpeed: 15,
-    });},3000);
-    </script>
+        setTimeout(()=> {typed2 = new Typed('#typed-text2', {
+                 strings: ["I'm an aspiring frontend developer."],typeSpeed: 30,});},2000);
+         setTimeout(()=>{ typed3 = new Typed('#typed-text3', {
+              strings: ["looking for internships or a full-time role in web development or SDE. Open to collaborating with like-minded individuals to create meaningful projects."],
+              typeSpeed: 15,});},3000);
+  </script>
 </body>
 </html>
