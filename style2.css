@@ -3,47 +3,32 @@ body {
     margin-bottom: 50px;
     padding: 0;
     font-family: 'Poppins', sans-serif; 
-    background-color: black;
+    background-color: #faf5ff;
     overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
 }
+
 .navbar {
     position: sticky;
-    margin-top:5px;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); 
+    background-color: #ffffff; 
     justify-content: space-between;
     align-items: center;
     top:0;
     z-index: 1000;
 }
+
 #toggle-light-mode{
-    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
+    display: none;
+}
+#toggle-dark-mode{
+    background: #ca8a04;
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 30px;
     cursor: pointer;
-}
-#toggle-dark-mode{
-    display: none;
-}
-.list {
-    display: flex;
-    list-style: none;
-    gap: 10px;
-}
- a{
-    text-decoration: none;
-    list-style: none; 
-    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: medium;
-    font-weight: bolder;
-    font-size: 17px;
 }
 .fa-x,.fa-bars{
     display: none;
@@ -52,8 +37,22 @@ html{
     display: none;
 }
 
+.list {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+ a{
+    text-decoration: none;
+    list-style: none; 
+    color: black;
+    font-size: medium;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
 .logo span {
-      background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+      background: #a855f7;
       -webkit-background-clip: text;
        color: transparent;
        font-weight: bold;
@@ -71,14 +70,13 @@ html{
 }
 
 .list-items :hover {
-    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
-     color: #001;
+    background: #a855f7;
+     color: white;
      border-radius: 20px;
      padding:7px;
 }
 .description-container {
     display: flex;
-    color: white;
      align-items: center;
     justify-content: space-between; 
     margin-top: 15px;
@@ -93,12 +91,12 @@ html{
        padding: 20px;
        font-weight: bold;
        font-size: 18px;
-       background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+       background: #a855f7;
       -webkit-background-clip: text;
        color: transparent;     
   }
 .description h1{
-    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    background: #ca8a04;
     -webkit-background-clip: text;
     color: transparent; 
 }
@@ -107,7 +105,6 @@ html{
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
 .about-container{
     display: flex;
@@ -116,38 +113,38 @@ html{
     gap:20px;   
 }
 .about h1{
-    background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+    background: #9333ea;
       -webkit-background-clip: text;
        color: transparent; 
 }
 .about-card{
-    background: #262626;
+    background: white;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 13px;
-    color: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 .about-card h2{
     text-align: center;
-    background: linear-gradient(to right, #FFDAB9, #AFEEEE);
+    background: #ca8a04;
     -webkit-background-clip: text;
     color: transparent;
    
 }
 .about-card h4 {
     margin: 5px; 
-    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
-    -webkit-background-clip: text;
-    color: transparent; 
+    color: #a855f7;
 }
 .project {
-    background: #262626;
+    background: white;
     padding: 15px;
     border-radius: 13px;
-    color: white;
+    color: black;
     width: 200px;
     height: 330px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 .project-container{
     display: flex;
@@ -171,9 +168,7 @@ html{
     margin-top: 5px;
 }
 .project div a{
-    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
-    -webkit-background-clip: text;
-    color: transparent; 
+    color: #ca8a04; 
 }
 .contact-container{
     display: flex;
@@ -181,16 +176,17 @@ html{
     justify-content: center;
 }
 .contact-card{
-    background: #262626;
+    background: white;
     width: 290px;
     padding: 10px;
     border-radius: 13px;
-    color: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 .contact-card p i{
     margin-right: 15px;
     margin-left: 5px;
-    background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+    background:  #a855f7;
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 21px;   
@@ -201,17 +197,16 @@ html{
 }
 .btn1{
     font-weight: lighter;
-    color: black;
+    color: white;
    display: inline-block;
    margin-top: 20px;
    margin-left: 60px;
    padding: 5px;
    border-radius: 7px;
-   background: linear-gradient(to right, #E6E6FA, #CBAACB, #FFDAB9);
+   background:  #a855f7;
    cursor: pointer;
    border: none;
 }
-
 @media only screen and (max-width:1112px) {
     .about{
         flex-direction: column;
@@ -233,12 +228,11 @@ html{
 @media only screen and (max-width:700px) {
     .fa-x,.fa-bars{
         display: block;
-        background: linear-gradient(135deg, #d3a0a3, #a6c0e0, #a9cce3);
+        background: #a855f7;
         -webkit-background-clip: text;
         color: transparent; 
         cursor: pointer;
     }
-    
 .list{
     flex-direction: column;
     gap:0px;
@@ -251,7 +245,8 @@ html{
     padding-top: 50px;
     z-index: 2;
     transition: right 0.3s ease; 
-    background: #000;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .list li{

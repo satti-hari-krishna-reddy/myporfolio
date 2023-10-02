@@ -4,41 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="theme-style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/932e9edb43.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo"><span>My Portfolio.</span></div>
+        <i class="fa-solid fa-sun" id="toggle-light-mode" onclick="toggleTheme()" title="switch to light mode"></i>
+        <i class="fa-solid fa-moon" id="toggle-dark-mode" onclick="toggleTheme()"title="switch to dark mode"></i>
         <ul class="list">
-            <li class="list-items"><a href="#">Home</a></li>
-            <li class="list-items"><a href="#">About</a></li>
-            <li class="list-items"><a href="#">Projects</a></li>
-            <li class="list-items"><a href="#">Contact</a></li>
+            <li class="list-items"onclick="closemenu()"><a href="#home-scroll">Home</a></li>
+            <li class="list-items"onclick="closemenu()"><a href="#about-scroll">About</a></li>
+            <li class="list-items"onclick="closemenu()"><a href="#project-scroll">Projects</a></li>
+            <li class="list-items"onclick="closemenu()"><a href="#contact-scroll">Contact</a></li>
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
        </ul>
+       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
 
-    <div class="description-container">
-        <div class="description"> <h1>Hi, my name is Hari Krishna.</h1>
-            <h3>I'm an aspiring frontend developer.</h3>
-            <p> kldfldfksdlfj kfkasfj ik dsk kl kf okfekf pifjekfjjk ieojirpe kej 
-                ek kerhjk kwhjw kjrkwrkw j kjhk ieje ekfje ekfekrj kfjlfkjoe ehr ieorekfj lkf
+    <div id="home-scroll" class="description-container">
+        <div class="description"> <h1 id="typed-text"></h1>
+            <h3 id="typed-text2"></h3>
+            <p id="typed-text3">
             </p>
         </div>
         <img src="developerpic.png" alt="developer-pic">    
     </div>
 
-    <div class="about">
+    <div id="about-scroll" class="about">
       <h1>About me</h1>
     </div>
-
     <div class="about"> 
       <div class="about-container">
         <div class="about-card">
-            <h2>Skills</h2>
+           <h2>Skills</h2>
            <h4>Programming</h4>
            <p>C language, Java, DSA.</p>
 
@@ -79,7 +81,7 @@
         </ul>    
       </div>
     </div>
-    <div class="about">
+    <div id="project-scroll" class="about">
         <h1>Projects</h1>
     </div>
     <div class="project-container">
@@ -107,6 +109,63 @@
             <div>Created a snake game using html and Javascript <br>Website link : <a href="https://satti-hari-krishna-reddy.github.io/snake_game_project/" target="_blank">click here</a> Source code : <a href="https://github.com/satti-hari-krishna-reddy/snake_game_project" target="_blank">click here</a></div>
         </div>
     </div>
+    <div class="about">
+        <h1>Contact me</h1>
+    </div>
+    <div class="contact-container">
+        <div class="contact-card">
+            <p><i class="fa-solid fa-paper-plane"></i> hari.100.hks@outlook.com <i id ="clipboard" class="fa-regular fa-clipboard" onclick="copyToClipBoard()" title="copy to clipboard"></i><i id="check" class="fa-solid fa-check"></i></p>
+              <div class="social-icons">
+                <a href="https://in.linkedin.com/in/hari-krishnareddy-86659b249"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/satti-hari-krishna-reddy" target="_blank"><i class="fa-brands fa-github"></i></a>
+              </div>
+              <a id="contact-scroll" href="HARIKRISHNARESUME.pdf" download class="btn btn1">Download Resume</a>
+        </div>
+    </div>
+    <script>
+          function toggleTheme() {
+            const themeStyle = document.getElementById('theme-style');
+            if (themeStyle.href.includes('style.css')) {
+                themeStyle.href = 'style2.css';
+                document.getElementById('toggle-light-mode').style.display = 'none';
+                document.getElementById('toggle-dark-mode').style.display = 'block';
+            } else {
+                themeStyle.href = 'style.css';
+                document.getElementById('toggle-dark-mode').style.display = 'none';
+                document.getElementById('toggle-light-mode').style.display = 'block';
+            }
+        }
 
+        function openmenu() {
+            document.querySelector('.list').style.right = '0';
+        }
+    
+        function closemenu() {
+            document.querySelector('.list').style.right = '-250px';
+        }
+        function copyToClipBoard(){
+            const text="hari.100.hks@outlook.com";
+            navigator.clipboard.writeText(text);
+            document.getElementById('clipboard').style.display='none';
+            document.getElementById('check').style.display='block';
+            setTimeout(setback,4000);
+        }
+        function setback(){
+            document.getElementById('check').style.display='none';
+            document.getElementById('clipboard').style.display='block';
+        }
+      var typed1 = new Typed('#typed-text', {
+      strings: ['Hi, my name is Hari Krishna.'],
+      typeSpeed: 35,
+    });
+    setTimeout(()=> {typed2 = new Typed('#typed-text2', {
+      strings: ["I'm an aspiring frontend developer."],
+      typeSpeed: 30,
+    });},2000);
+    setTimeout(()=>{ typed3 = new Typed('#typed-text3', {
+      strings: ["looking for internships or a full-time role in web development or SDE. Open to collaborating with like-minded individuals to create meaningful projects."],
+      typeSpeed: 15,
+    });},3000);
+    </script>
 </body>
 </html>
