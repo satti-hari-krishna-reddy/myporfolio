@@ -141,7 +141,6 @@ html{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    color: transparent;
 }
 .project {
     background: white;
