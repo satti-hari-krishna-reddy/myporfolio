@@ -136,6 +136,12 @@ html{
     margin: 5px; 
     color: #a855f7;
 }
+.About h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 .project {
     background: white;
     padding: 15px;
